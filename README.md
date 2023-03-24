@@ -104,14 +104,13 @@ I learned the following skills while doing this project:
 
 ## Author Info
 
-```md
+
 ### Aarti Contractor
 
 
-* [Portfolio](https://www.linkedin.com/in/aarti-contractor/)
-* [LinkedIn](https://www.linkedin.com/in/aarti-contractor/)
-* [Github](https://github.com/aarticontractor)
-```
+- Linkedin: https://www.linkedin.com/in/aarti-contractor/
+- Github: https://github.com/aarticontractor
+
 
 <br>
 
