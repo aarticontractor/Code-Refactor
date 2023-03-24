@@ -1,4 +1,4 @@
-# Your Project Title 
+# Code Refactoring using HTML, CSS, and Git
 
 ## Technology Used 
 
@@ -10,185 +10,120 @@
 
 ## Description 
 
-[Visit the Deployed Site](https://youtu.be/BFyeuLhjcPY)
+[Visit the Deployed Site](https://aarticontractor.github.io/Code-Refactor/)
+
+This repository "Code-Refactor" is where I as a bootcamp student, have refactored an existing peice of code in accordance with the accesibility standards.
+
+Some aspects of the existing HTML and CSS codes were changed in order to make the page more accessible and responsive for the client.
+
+With help from useful references and class content the refactoring was made possible. 
 
 
-At a minimum, your project README needs a title and a short description explaining the 
-what, 
-why, and
- how. What was your motivation? 
- Why did you build this project? (Note: The answer is not "Because it was a homework assignment.") 
- What problem does it solve? What did you learn? What makes your project stand out? 
+The main motivation for this project was to see how minute changes in the code can help discover advanced effects in the output needed. Because of this project I was able to implement the CSS styles and play along to see what difference it makes in the outcome of the project.
+
+In the end, I have tried my best to complete the acceptance criteria based on the user story.
 
 
+<br>
 
-If you're new to Markdown, read the GitHub guide on [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
-
-If you need an example of a good README, check out [the VSCode repository](https://github.com/microsoft/vscode).
-
-
-![Site Langing Page](./site.gif)
-
-
-## Table of Contents (Optional)
-
-If your README is very long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents:
 
 * [Code Refactor Example](#code-refactor-example)
 * [Usage](#usage)
 * [Learning Points](#learning-points)
 * [Author Info](#author-info)
 * [Credits](#credits)
-* [License](#license)
 
+
+<br>
 
 ## Code Refactor Example
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
-
-```html
-<div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-```
-
-Converting the above non-semantic div with the class of 'header' to an appropriate [<header> semantic element](https://www.w3schools.com/html/html5_semantic_elements.asp). 
+The below code shows a single class of the code and how CSS was applied later on to make it responsive.
 
 ```html
-<header>
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
+<div id="search-engine-optimization" class="search-engine-optimization">
+    <!--Add Alt attributes to images-->
+    <img src="./assets/images/search-engine-optimization.jpg" alt="SEO diagram in notebook" class="float-left" />
+    <h2>Search Engine Optimization</h2>
+    <p> The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business. </p>
+</div>
 ```
 
-This change require some additional modification to the CSS selector: 
+
+The below code snippet shows the media query inserted for the above code of search engine optimisation class to make it responsive for devices smaller than 780 pixels.
+
+
 
 ```css
-.header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+@media screen and (max-width: 780px) {
+
+    .search-engine-optimization, .online-reputation-management, .social-media-marketing {
+        margin-bottom: 5px;
+        padding: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #0072bb;
+        color: #ffffff;
+        flex-direction: column;
+        
+    }
+    .search-engine-optimization img {
+        max-height: 120px;
+    
+   }
 }
 ```
 
-No longer targeting the element on the page with the class of 'header' but instead the css selector targeting the 'header' element 
 
-```css
-header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
-}
+<br>
 
-```
 
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-```md
-![alt text](assets/images/screenshot.png)
-```
+For example, when the SEO link was unable to redirect on the page to its content, the code was refactored and thus the solution has been provided in the below GIF:
 
+
+![alt text](./assets/images/horiseon.gif)
+
+<br>
 
 ## Learning Points 
 
+I learned the following skills while doing this project:
 
-This is a good place to Explain what you Learned by creating this application.
-This is a great way to remind about all of the Complex Skills you now have.
-If the user is less experienced than you:
-They will be impressed by what you can do!
+- Using Command line to navigate and create repositories in GitHub
+- Semantic elements of HTML
+- Advanced properties of CSS (styling, display, text, flexbox,media query, etc) to make the page responsive.
+- The Git flow (clone, add, commit, push, pull, etc)
+- Using debugging skills to point out small issues in the code provided
+- Made use of Google DevTools 
 
-If the user is more experienced than you:
-They will be impressed by what you can do!
-
-Remember, it is easy to forget exactly how Valuable and Impressive your skills are, as well as How Much You’ve Learned!
-So quantify that here!
-
+<br>
 
 ## Author Info
 
 ```md
-### Farley Wittles
+### Aarti Contractor
 
 
-* [Portfolio](https://youtu.be/bHX54GCrDB4)
-* [LinkedIn](https://youtu.be/bHX54GCrDB4)
-* [Github](https://youtu.be/bHX54GCrDB4)
+* [Portfolio](https://www.linkedin.com/in/aarti-contractor/)
+* [LinkedIn](https://www.linkedin.com/in/aarti-contractor/)
+* [Github](https://github.com/aarticontractor)
 ```
 
-The user has looked through your whole README, and gotten familiar with your application. 
-This is where you take credit, and make it easy for them to learn more about you!
-Direct them to the following:
-- Your GitHub Profile
-- Your LinkedIn
-- Your Portfolio Website
-- And Anything Else You Want!
-
-Give credit where credit is due! 
-
-If you Pseudocode or Pair Program with someone else, give them kudos in your Contributors section!
-
+<br>
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+The following resources were used while making this project:
 
 
-## License
-
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-
-
----
-
-🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+- https://www.w3schools.com/
+- https://developer.mozilla.org/en-US/
 
 
 
-
-
----
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
